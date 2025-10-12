@@ -483,5 +483,13 @@
                 });
             </script>
     
-
+<script type="text/javascript"> 
+function getElementY(query) { return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top; } 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => { anchor.addEventListener("click", 
+function (e) { e.preventDefault(); 
+const targetID = this.getAttribute("href"); const target_Y = getElementY(targetID); 
+let scroll = (targetY) => { window.scrollTo({ top: targetY, behavior: "smooth" }); 
+setTimeout(() => { const targetY_again = getElementY(targetID); if (targetY !== targetY_again) { scroll(targetY_again); } }, 1500); }; 
+scroll(target_Y); }); }); 
+</script>
 </body></html>

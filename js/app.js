@@ -124,6 +124,34 @@
   
   
     intializeSlick: function (e) {
+      if ($(".testimonial-slider-doors").length) {
+          const $wrap   = $('.dr-slider-wrap');
+          const $slider = $wrap.find('.testimonial-slider-doors');
+
+          $slider.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0px',
+            arrows: true,
+            dots: true,
+            infinite: true,
+            appendArrows: $wrap,  // <-- стрелки в обёртку
+            prevArrow:
+              '<button type="button" class="slick-arrow dr-prev" aria-label="Previous">' +
+                '<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+              '</button>',
+            nextArrow:
+              '<button type="button" class="slick-arrow dr-next" aria-label="Next">' +
+                '<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+              '</button>',
+            responsive: [
+              { breakpoint: 992, settings: { slidesToShow: 2 } },
+              { breakpoint: 600, settings: { slidesToShow: 1 } }
+            ]
+          });
+          }
+
       if ($(".category-slider").length) {
         $(".category-slider").slick({
           infinite: true,
@@ -152,13 +180,13 @@
             {
               breakpoint: 768,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
               },
             },
             {
               breakpoint: 492,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
               },
             },
           ],

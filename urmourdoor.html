@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/slick-theme.css">
         <link rel="stylesheet" href="css/sal.css">
-        <link rel="stylesheet" href="css/app.css?v=12">
+        <link rel="stylesheet" href="css/app.css?v=14">
  
     </head>
 
@@ -51,7 +51,7 @@
                         </div>
                         <div class="main-menu__right">
                             <div class=" d-xl-block d-none">
-                             <button class="btn-calc">Расчитать стоимость</button>
+                             <button class="btn-calc">Рассчитать стоимость</button>
                             </div>
                         </div>
                         <!-- Burger -->
@@ -68,7 +68,7 @@
                             <li><a href="index.html#about" class="menu-item">О компании</a></li>
                             <li><a href="index.html#gallery" class="menu-item">Наши работы</a></li>
                             <li><a href="index.html#footer" class="menu-item">Контакты</a></li>
-                             <button class="btn-calc burgertel">Расчитать стоимость</button>
+                             <button class="btn-calc burgertel">Рассчитать стоимость</button>
                         </ul>
                         </div>
                       </nav>
@@ -181,7 +181,7 @@
                         <div class="main">
                             <div class="text-center mb-4">
                                 <h2 class="footer-title text-uppercase color-white mb-16">Замена, ремонт, реставрация. <br> Приезжаем быстро, работаем чисто.</h2>
-                                <a href="./properties.html" class="real-btn dark mb-lg-0 mb-32">Срочный выезд мастера 24/7</a>
+                                <a href="./properties.html" class="btn-calc footerbtn">Срочный выезд мастера 24/7</a>
                             </div>
                             <div class="row justify-content-between">
                                 <div class="col-xl-3 col-lg-3 col-12 mb-5 order-lg-1 order-2">
@@ -310,5 +310,13 @@
                 });
             </script>
     
-
+<script type="text/javascript"> 
+function getElementY(query) { return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top; } 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => { anchor.addEventListener("click", 
+function (e) { e.preventDefault(); 
+const targetID = this.getAttribute("href"); const target_Y = getElementY(targetID); 
+let scroll = (targetY) => { window.scrollTo({ top: targetY, behavior: "smooth" }); 
+setTimeout(() => { const targetY_again = getElementY(targetID); if (targetY !== targetY_again) { scroll(targetY_again); } }, 1500); }; 
+scroll(target_Y); }); }); 
+</script>
 </body></html>

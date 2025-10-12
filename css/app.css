@@ -3087,7 +3087,7 @@ button:hover .button-text {
 }
 .about__grid {
     display: grid;
-    margin-top: 60px;
+    margin-top: 20px;
     gap: 28px;
     align-items: center;
     grid-template-columns: 1.1fr 0.9fr;
@@ -3475,7 +3475,7 @@ button:hover .button-text {
     text-transform: uppercase;
     margin-bottom: 8px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 /* logo Area start */
 .sidebar {
@@ -4337,12 +4337,13 @@ iframe {
     }
     #about .about-itemtext {
       font-size: 20px !important;
+      line-height: 24px;
     }
     .about__points li {
           margin: 20px 0;
     }
     #about .about-titletext{
-      font-size: 24px !important;
+      font-size: 20px !important;
     }
     .row {
     display: flex;

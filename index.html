@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -23,7 +25,7 @@
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/slick-theme.css">
         <link rel="stylesheet" href="css/sal.css">
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/app.css?v=12">
  
     </head>
 
@@ -53,9 +55,23 @@
                             <div class=" d-xl-block d-none">
                              <button class="btn-calc">Расчитать стоимость</button>
                             </div>
-                          <a href="" class="d-xl-none d-flex main-menu__toggler mobile-nav__toggler">
-                            <img class="white" src="images/menu-2.png" alt="">
-                          </a>
+                        </div>
+                        <!-- Burger -->
+                        <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="offcanvas">
+                        <span></span><span></span><span></span>
+                        </button>
+
+                        <!-- Overlay + Off-canvas menu -->
+                        <div id="overlay" class="overlay" hidden></div>
+
+                        <div id="offcanvas" class="offcanvas" aria-hidden="true">
+                        <ul class="menu">
+                           <li><a href="index.html" class="menu-item">Главная</a></li>
+                            <li><a href="#about" class="menu-item">О компании</a></li>
+                            <li><a href="#gallery" class="menu-item">Наши работы</a></li>
+                            <li><a href="#footer" class="menu-item">Контакты</a></li>
+                             <button class="btn-calc burgertel">Расчитать стоимость</button>
+                        </ul>
                         </div>
                       </nav>
                     </div>
@@ -75,7 +91,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-xl-10">
                                     <div class="category-slider">
-                                        <div class="item">
+                                        <a href="./lockers.html" class="item">
                                             <img class="category-imgicon" src="./images/door-handle.png" alt="">
                                             <h4 class="category-titletext">Сервис замков</h4>
                                              <div class="stage">
@@ -86,31 +102,28 @@
                                                     <span class="button-text">20 моделей</span>
                                                 </button>
                                             </div>
-                                        </div>
-                                      
-                                        <div class="item">
+                                        </a>
+                                        <a href="./restorsdoors.html" class="item">
                                            <img class="category-imgicon" src="./images/door-usuall.png" alt="">
                                             <h4 class="category-titletext">Сервис дверей</h4>
-                                           
                                              <button class="learn-more">
                                                     <span class="circle" aria-hidden="true">
                                                     <span class="icon arrow"></span>
                                                     </span>
                                                     <span class="button-text">5 услуг</span>
                                                 </button>
-                                        </div>
-                                        <div class="item">
+                                        </a>
+                                        <a href="./strongbox.html" class="item">
                                             <img class="category-imgicon" src="./images/guarantee.png" alt="">
                                             <h4 class="category-titletext">Сейфы</h4>
-                                           
                                              <button class="learn-more">
                                                     <span class="circle" aria-hidden="true">
                                                     <span class="icon arrow"></span>
                                                     </span>
                                                     <span class="button-text">20 видов</span>
                                                 </button>
-                                        </div>
-                                        <div class="item">
+                                        </a>
+                                        <a href="./urmourdoor.html" class="item">
                                            <img class="category-imgicon" src="./images/door-icon.png" alt="">
                                             <h4 class="category-titletext">Бронедвери</h4>
                                          
@@ -120,8 +133,7 @@
                                                     </span>
                                                     <span class="button-text">2 услуги</span>
                                                 </button>
-                                        </div>
-                                    
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -136,26 +148,19 @@
                     <!-- Контент -->
                     <div class="about__content">
                     
-                    <p class="lead">
+                    <p class="lead about-titletext">
                         Уже более <strong>20 лет в Одессе</strong> устанавливаем и меняем двери и замки любой сложности.
                         Выполняем реставрацию бронедверей, работаем с сейфами и фурнитурой. Делаем как для себя — ровно,
                         чисто и в срок. Даём честные рекомендации и берём ответственность за результат.
                     </p>
 
-                    <ul class="about__points">
-                        <li>Монтаж входных и межкомнатных дверей, раздвижные/скрытые системы</li>
-                        <li>Врезка и замена замков (цилиндровые, сувальдные, магнитные)</li>
-                        <li>Реставрация и усиление бронедверей, работа с сейфами</li>
-                        <li>Чистый монтаж: укрытие, пылесос, вынос мусора</li>
-                        <li>Работаем по договору, гарантия на монтаж до 3 лет</li>
+                    <ul class="about__points about-itemtext">
+                        <li><a href="">Монтаж входных и межкомнатных дверей, раздвижные/скрытые системы</a></li>
+                        <li><a href="">Врезка и замена замков (цилиндровые, сувальдные, магнитные)</a></li>
+                        <li><a href="./urmourdoor.html">Реставрация и усиление бронедверей, работа с сейфами</a></li>
+                        <li><a href="">Чистый монтаж: укрытие, пылесос, вынос мусора</a></li>
+                        <li><a href="">Работаем по договору, гарантия на монтаж до 3 лет</a></li>
                     </ul>
-<!-- 
-                    <div class="about__kpi">
-                        <div class="kpi"><span class="kpi__num">20+</span><span class="kpi__label">лет в Одессе</span></div>
-                        <div class="kpi"><span class="kpi__num">8000+</span><span class="kpi__label">выполненных работ</span></div>
-                        <div class="kpi"><span class="kpi__num">3 года</span><span class="kpi__label">гарантия на монтаж</span></div>
-                        <div class="kpi"><span class="kpi__num">24/7</span><span class="kpi__label">оперативный выезд*</span></div>
-                    </div> -->
 
                     <p class="note">*Аварийное открытие — только при подтверждении права собственности.</p>
 
@@ -180,37 +185,39 @@
                     <div class="container">
                         <div class="heading">
                             <h2 class="">Наши работы</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestias sit soluta libero totam. Illum, placeat fuga et rem error, veritatis quam culpa eius voluptatum, nulla suscipit reiciendis mollitia saepe!</p>
+                            <p class="gallery-titletext">Lock-master предлагает вам услуги по реставрации входной двери и металлоконструкции. У нас вы можете модифицировать уже установленную бронированную дверь, а в частности, заменить облицовку с внешней или с внутренней стороны, заменить старую уплотнительную резину на новую или установить дополнительно второй уплотнительный контур. <br> <br>
+                                 Заказать изготовление откосов из МДФ или влагостойкой фанеры с наличниками на внутреннюю часть входной двери. Монтаж таких современных и красивых откосов избавит вас от грязных и пыльных работ, связанных со шпатлевкой и покраской стен после установки новой двери. <br><br>
+                                  А также специалисты Lock-master помогут вам наладить правильную работу существующих замков, отрегулировать работу дверей (холста, коробки, петель), которые претерпели временный износ или изменили свою геометрию в связи с усадкой дома. Все вышеперечисленные работы выполняются по месту, у вас дома, в кратчайшие сроки с максимальной ответственностью и с высоким качеством!</p>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-6">
+                            <div class="col-lg-4 col-6 doorsitem">
                                 <div class="img-block mb-24">
-                                    <img src="images/b-9-min.jpg" class="w-100" alt="">
+                                    <img src="images/works/b-5-min.jpg" class="w-100" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6">
+                            <div class="col-lg-4 col-6 doorsitem">
                                 <div class="img-block mb-24">
-                                    <img src="images/b-9-min.jpg" class="w-100" alt="">
+                                    <img src="images/works/2.jpg" class="w-100" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6">
+                            <div class="col-lg-4 col-6 doorsitem">
                                 <div class="img-block mb-24">
-                                    <img src="images/b-9-min.jpg" class="w-100" alt="">
+                                    <img src="images/works/3.jpg" class="w-100" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6">
+                            <div class="col-lg-4 col-6 doorsitem">
                                 <div class="img-block mb-24">
-                                    <img src="images/b-9-min.jpg" class="w-100" alt="">
+                                    <img src="images/works/4.jpg" class="w-100" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6">
+                            <div class="col-lg-4 col-6 doorsitem">
                                 <div class="img-block mb-24">
-                                    <img src="images/b-9-min.jpg" class="w-100" alt="">
+                                    <img src="images/works/5.jpg" class="w-100" alt="">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-6">
+                            <div class="col-lg-4 col-6 doorsitem">
                                 <div class="img-block mb-24">
-                                    <img src="images/b-9-min.jpg" class="w-100" alt="">
+                                    <img src="images/works/8.jpg" class="w-100" alt="">
                                 </div>
                             </div>
                         </div>
@@ -220,125 +227,84 @@
                 <!-- gallery Area end -->
 
                 <!-- testimonial Area start -->
-                <section class="testimonial p-100 bg-gray">
+                <section class="testimonial p-20 bg-gray">
                     <div class="container">
                         <div class="heading">
                             <h2 class="">Отзывы наших клиентов</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim tenetur nesciunt ad? Eligendi ullam qui repellendus ipsa blanditiis amet minima. Exercitationem recusandae repellendus, aliquid voluptatum sequi cum cumque autem molestiae?</p>
+                            <p class="testimonial-titletext">
+                                Каждый отзыв — завершённый кейс: исправили геометрию, обновили облицовку, заменили замок — дверь снова как новая.
+                                <br>
+                                Мы бережно восстанавливаем входные двери и замки — от косметики до сложной механики. Почитайте, что говорят клиенты:
+                            </p>
                         </div>
                         <div class="testimonial-slider">
                             <div class="testimonial-block">
-                                <img src="images/img-1_1.png" class="w-100" alt="">
+                                <img src="images/works/2.jpg" class="w-100 testimonial-worksimg" alt="">
                                 <div class="quote">
                                     <img src="images/quote.png" alt="">
                                 </div>
                                 <div class="user-img">
-                                    <img src="images/img-1_2.png" alt="">
+                                    <img src="images/rewiev1.jpg" alt="">
                                 </div>
-                                <h6 class="name">Emily Johnson</h6>
-                                <p>"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                                
+                                <h6 class="name">Иероним Борщов</h6>
+                                <p>Очень удивило соотношение цена-качество, при бюджетных ценах, качество просто отличное. Плюс вежливые и коммуникабельный мастера. Пользовался услугами два раза, оба раза сделали хорошо, объяснили, ответили на все вопросы. Т.е. персонал состоит из профессионалов своего дела. Рекомендую всем.</p>
+                                <div class="reviewsgoogleicon">
+                                    <img class="gglreviewslogo" src="./images/gglreviews.png" alt="">
+                                    <img class="gglreviewsstar" src="./images/starsgglreviews.svg" alt="">
+                                </div>
                             </div>
                             <div class="testimonial-block">
-                                <img src="images/img-2_2.png" class="w-100" alt="">
+                                <img src="images/works/8.jpg" class="w-100 testimonial-worksimg" alt="">
                                 <div class="quote">
                                     <img src="images/quote.png" alt="">
                                 </div>
                                 <div class="user-img">
-                                    <img src="images/img-2_1.png" alt="">
+                                    <img src="images/rewiev3.jpg" alt="">
                                 </div>
-                                <h6 class="name">Sophia Rodriguez</h6>
-                                <p>"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                                <h6 class="name">Жанна Онопченко</h6>
+                                <p>Спасибо большое за работу , качественную , быструю и очень чистую☝️ Ребята даже покрасили дверной проем, где были затертые места👌После того как пользовалась услугами других компаний и получила ещё больше проблем , ребята решили все эти вопросы очень быстро и на отлично🙌 Спасибо большое. Очень рекомендую данную компанию , которая сэкономит ваши деньги, выполнив всё качественно и быстро и ваше время, и конечно же ваши нервы. Приятно, что в Одессе есть такой сервис 😺</p>
+                                <div class="reviewsgoogleicon">
+                                    <img class="gglreviewslogo" src="./images/gglreviews.png" alt="">
+                                    <img class="gglreviewsstar" src="./images/starsgglreviews.svg" alt="">
+                                </div>
                             </div>
                             <div class="testimonial-block">
-                                <img src="images/img-3_1.png" class="w-100" alt="">
+                                <img src="images/works/3.jpg" class="w-100 testimonial-worksimg" alt="">
                                 <div class="quote">
                                     <img src="images/quote.png" alt="">
                                 </div>
                                 <div class="user-img">
-                                    <img src="images/img-3_2.png" alt="">
+                                    <img src="images/rewiev2.jpg" alt="">
                                 </div>
-                                <h6 class="name">Ava Thompson</h6>
-                                <p>"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+
+                                <h6 class="name">Volodymyr Glushko</h6>
+                                <p>Евгений - отличный мастер. Оставил о себе исключительно положительные впечатления. Заменил один замок и в виде бонуса, совершенно бесплатно, отрегулировал другой, которым до этого пользоваться не могли. Всем рекомендую!</p>
+                                <div class="reviewsgoogleicon">
+                                            <img class="gglreviewslogo" src="./images/gglreviews.png" alt="">
+                                            <img class="gglreviewsstar" src="./images/starsgglreviews.svg" alt="">
+                                </div>
                             </div>
                             <div class="testimonial-block">
-                                <img src="images/img-2_2.png" class="w-100" alt="">
+                                <img src="images/works/5.jpg" class="w-100 testimonial-worksimg" alt="">
                                 <div class="quote">
                                     <img src="images/quote.png" alt="">
                                 </div>
                                 <div class="user-img">
-                                    <img src="images/img-2_1.png" alt="">
+                                    <img src="images/review4.jpg" alt="">
                                 </div>
-                                <h6 class="name">Sophia Rodriguez</h6>
-                                <p>"The real estate agents were incredibly responsive and helpful throughout the entire process. I couldn't have asked for a better experience."</p>
+                                
+                                <h6 class="name">Сергей Воронин</h6>
+                                <p>Нашёл в поиске. Почитал отзывы. Заказал. Всё сделали быстро, качественно и главное не дорого. Молодцы ребята.</p>
+                                <div class="reviewsgoogleicon">
+                                    <img class="gglreviewslogo" src="./images/gglreviews.png" alt="">
+                                    <img class="gglreviewsstar" src="./images/starsgglreviews.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- testimonial Area end -->
-
-                <!-- blog Area start -->
-                <!-- <section class="blog bg-gray p-100">
-                    <div class="container">
-                        <div class="heading">
-                            <h2 class="">Наш блог и полезные статьи</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam expedita, non possimus fugit libero, quae, doloremque quod illum ullam blanditiis qui eos placeat esse eum quia voluptate ipsa? Culpa, eius?</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="content">
-                                    <div class="img-block position-relative ">
-                                        <img src="images/img-1_3.png" class="w-100" alt="">
-                                        <span class="date">May 09, 2023</span>
-                                    </div>
-                                    <div class="text-block">
-                                        <span class="category-text">Real Estate</span>
-                                        <a href="blogs-detail.html">How to Choose the Right Real Estate Agent for You</a>
-                                        <ul>
-                                            <li><i class="fal fa-calendar"></i><span> April 12, 2023</span></li>
-                                            <li><i class="fal fa-comment-alt"></i> <span>15</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="content">
-                                    <div class="img-block position-relative ">
-                                        <img src="images/img-2_3.png" class="w-100" alt="">
-                                        <span class="date">May 09, 2023</span>
-                                    </div>
-                                    <div class="text-block">
-                                        <span class="category-text">Real Estate</span>
-                                        <a href="blogs-detail.html">The Benefits of Investing in Real Estate for Passive Income</a>
-                                        <ul>
-                                            <li><i class="fal fa-calendar"></i><span> April 12, 2023</span></li>
-                                            <li><i class="fal fa-comment-alt"></i> <span>15</span></li>
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="content">
-                                    <div class="img-block position-relative ">
-                                        <img src="images/img-3_3.png" class="w-100" alt="">
-                                        <span class="date">May 19, 2023</span>
-                                    </div>
-                                    <div class="text-block">
-                                        <span class="category-text">Real Estate</span>
-                                        <a href="blogs-detail.html">Top 10 Things to Consider When Selling Your Home</a>
-                                        <ul>
-                                            <li><i class="fal fa-calendar"></i><span> April 12, 2023</span></li>
-                                            <li><i class="fal fa-comment-alt"></i> <span>15</span></li>
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> -->
-                <!-- blog Area end -->
-
+              
                 <!-- logo Area start -->
                 <div class="logo bg-white p-100">
                     <div class="container">
@@ -347,34 +313,40 @@
                             <div class=" col-12 ">
                                 <div class="logo-slider">
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-1.png" alt="">
+                                        <img src="images/firm/cerda.gif" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-2.png" alt="">
+                                        <img src="images/firm/abloy.webp" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-3.png" alt="">
+                                        <img src="images/firm/kava-logo.png" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-4.png" alt="">
+                                        <img src="images/firm/motura.png" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-5.png" alt="">
+                                        <img src="images/firm/mtl-logo.webp" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-1.png" alt="">
+                                        <img src="images/firm/secureme.png" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-2.png" alt="">
+                                        <img src="images/firm/mettem.jpg" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-3.png" alt="">
+                                        <img src="images/firm/border.jpg" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-4.png" alt="">
+                                        <img src="images/firm/elbor.jpg" alt="">
                                     </div>
                                     <div class="item text-center">
-                                        <img src="images/brand-logo-5.png" alt="">
+                                        <img src="images/firm/fuaro.png" alt="">
+                                    </div>
+                                    <div class="item text-center">
+                                        <img src="images/firm/apecs.png" alt="">
+                                    </div>
+                                    <div class="item text-center">
+                                        <img src="images/firm/disec.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -388,81 +360,51 @@
                     <div class="container">
                         <div class="main">
                             <div class="text-center mb-4">
-                                <h2 class="footer-title text-uppercase color-white mb-16">Find Your Dream Home Today with Our <br> Extensive Property Collection</h2>
-                                <a href="./properties.html" class="real-btn dark mb-lg-0 mb-32">View Properties</a>
+                                <h2 class="footer-title text-uppercase color-white mb-16">Замена, ремонт, реставрация. <br> Приезжаем быстро, работаем чисто.</h2>
+                                <a href="./properties.html" class="real-btn dark mb-lg-0 mb-32">Срочный выезд мастера 24/7</a>
                             </div>
                             <div class="row justify-content-between">
                                 <div class="col-xl-3 col-lg-3 col-12 mb-5 order-lg-1 order-2">
-                                    <h4 class="title">Location</h4>
-                                    <p class="fs-19 lh-130 color-gray mb-12 font-sec">123 Street, Your City, State and Country.</p>
-                                    <p class="fs-19 lh-130 color-gray mb-24 font-sec mb-5">123 Street, Your City, State and Country.</p>
-                                    <h4 class="title">Timing</h4>
-                                    <p class="fw-5 fs-19 lh-130 ls-2 color-gray mb-12 font-sec">Mon-Sat, 9AM - 5PM</p>
-                                    <p class="fw-5 fs-19 lh-130 ls-2 color-gray mb-0 font-sec">Sunday Off</p>
+                                    <h4 class="title">Адрес:</h4>
+                                    <p class="fs-19 lh-130 color-gray mb-12 font-sec"><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x40c633ce80fcef51:0x546c1a50c63fd6d4?sa=X&ved=1t:8290&hl=ru&ictx=111">г.Одеса , ул. Косовская 4/11</a></p>
+
+                                    <h4 class="title">Время работы</h4>
+                                    <p class="fw-5 fs-19 lh-130 ls-2 color-gray mb-12 font-sec">Пн-Сб, 8:00 - 18:00</p>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 mb-5 newsletter order-lg-2 order-1">
-                                    <h2 class="title">Subscribe Our Newsletter</h2>
-                                    <form action="./index.html">
-                                        <div class="input-group">
-                                            <input type="email" class="form-control" id="email" name="email" required="" placeholder="Your Email">
-                                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                                        </div>
-                                    </form>
+                                     <div class="maps">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.1752117897428!2d30.718504518454733!3d46.45462421722562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633ce80fcef51%3A0x546c1a50c63fd6d4!2z0KbQtdC90YLRgCDQv9C-INC30LDQvNC10L3QtSDQt9Cw0LzQutC-0LIg0Lgg0YDQtdGB0YLQsNCy0YDQsNGG0LjQuCDQtNCy0LXRgNC10LkgIkxvY2stbWFzdGVyIg!5e0!3m2!1sru!2scz!4v1760270853512!5m2!1sru!2scz" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-12 mb-5 order-3">
-                                    <h4 class="title">Contact Us</h4>
-                                    <a href="" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+1 123 456 789</a>
-                                    <a href="" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+1 123 456 789</a>
-                                    <a href="" class="fw-4 fs-19 color-gray mb-24 color-hover text-lowercase font-sec  mb-5">info@homelyexample.com</a>
-                                    <h4 class="title">Follow Us</h4>
+                                    <h4 class="title">Наши контакты:</h4>
+                                    <a href="tel:+380934930338" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+380 (93) 493 03 38</a>
+                                    <a href="tel:+380487353034" class="fw-6 fs-19 color-gray mb-12 d-block color-hover font-sec">+380 (48) 735 30 34</a>
+                                    <a href="mailto:zavamaster86@gmail.com" class="fw-4 fs-19 color-gray mb-24 color-hover text-lowercase font-sec  mb-5">zavamaster86@gmail.com</a>
+                                    <h4 class="title">Наши соц. сети:</h4>
                                     <ul class="footer-social-icon list-unstyled">
-                                        <li> <a href="" class="ms-lg-0"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li> <a href=""><i class="fab fa-instagram"></i></a></li>
-                                        <li> <a href=""><i class="fab fa-youtube"></i></a></li>
-                                        <li> <a href=""><i class="fal fa-basketball-ball"></i></a></li>
+                                        <li> <a href="https://www.facebook.com/lockmasterod/" class="ms-lg-0"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li> <a href="https://www.instagram.com/lock_master.od.ua/"><i class="fab fa-instagram"></i></a></li>
+                                        <li> <a href="https://t.me/lockmaster_news"><i class="fab fa-telegram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <p class="fw-4 fs-19 color-gray font-sec m-0 text-center">©2024 Homely, All Rights Reserved.</p>
+                            <p class="fw-4 fs-19 color-gray font-sec m-0 text-center linetopfooter">©2025 Lock Master.</p>
                         </div>
                     </div>
                 </footer>
                 <!-- footer Area end -->
-                
-
-                           <!-- Mobile Menu Start -->
-  <div class="mobile-nav__wrapper">
-    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-    <div class="mobile-nav__content">
-      <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-      <div class="logo-box">
-        <a href="index.html" aria-label="logo image"><img src="images/logo-main.png" alt=""></a>
-      </div>
-      <div class="mobile-nav__container"></div>
-      <ul class="mobile-nav__contact list-unstyled">
-        <li>
-          <i><svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
-            <g clip-path="url(#clip0_9532_881)">
-              <path d="M29.6875 4.75H3.3125C1.75856 4.75 0.5 6.01637 0.5 7.5625V24.4375C0.5 25.9928 1.76781 27.25 3.3125 27.25H29.6875C31.2284 27.25 32.5 25.9981 32.5 24.4375V7.5625C32.5 6.01912 31.2464 4.75 29.6875 4.75ZM29.2936 6.625C28.719 7.19656 18.8302 17.0333 18.4888 17.3729C17.9575 17.9042 17.2512 18.1967 16.5 18.1967C15.7487 18.1967 15.0425 17.9041 14.5095 17.3712C14.2799 17.1427 4.50019 7.41462 3.70637 6.625H29.2936ZM2.375 24.0559V7.94531L10.4774 16.005L2.375 24.0559ZM3.70756 25.375L11.8068 17.3273L13.1854 18.6987C14.0708 19.5841 15.2479 20.0717 16.5 20.0717C17.7521 20.0717 18.9292 19.5841 19.8128 18.7005L21.1933 17.3273L29.2924 25.375H3.70756ZM30.625 24.0559L22.5226 16.005L30.625 7.94531V24.0559Z" fill="#141516"></path>
-            </g>
-            <defs>
-              <clipPath id="clip0_9532_881">
-                <rect width="32" height="32" fill="white" transform="translate(0.5)"></rect>
-              </clipPath>
-            </defs>
-          </svg></i>
-          <a href="mailto:example@company.com">example@company.com</a>
-        </li>
-        <li>
-            <i><svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
-                <path d="M26.4984 24.8486L25.831 23.7343C24.6308 21.7554 22.9744 19.4841 20.8017 19.4841C20.3991 19.4841 20.0005 19.5651 19.6059 19.729L18.4398 20.2291C18.3332 20.2733 18.2298 20.3235 18.1202 20.3768C17.8217 20.522 17.4833 20.6864 17.1352 20.6864C16.2764 20.6864 15.2814 19.5688 14.3339 17.5398C13.404 15.5482 13.4634 14.5041 13.6768 13.9788C13.9124 13.3992 14.4601 13.1514 15.0485 12.9287C15.1303 12.8976 15.2042 12.8695 15.2761 12.8399L16.457 12.3427C19.5335 11.0562 18.389 6.56023 18.0137 5.08622L17.6955 3.81889C17.4234 2.77439 16.7021 0 14.3094 0C13.8665 0 13.3939 0.103194 12.9054 0.306839C12.5848 0.434135 8.17364 2.23476 6.57551 5.39811C4.66549 9.16346 5.01866 14.2127 7.62419 20.4025C10.2102 26.6 13.5637 30.3908 17.5914 31.6692C18.2823 31.8887 19.0631 31.9999 19.9123 31.9999H19.9128C22.6923 31.9999 25.4361 30.8172 25.6588 30.7191C26.6172 30.3131 27.2366 29.6961 27.4999 28.8851C27.9461 27.5098 27.1975 26.0031 26.4984 24.8486ZM25.4405 28.2169C25.3793 28.4054 25.1665 28.5774 24.8086 28.7281C24.8027 28.7307 24.7955 28.7337 24.7894 28.7365C24.7646 28.7475 22.281 29.8352 19.9122 29.8351C19.2855 29.8351 18.7251 29.758 18.2465 29.6059C14.8532 28.5288 11.9517 25.152 9.62066 19.5658C7.27232 13.9866 6.89707 9.54939 8.50689 6.37593C9.75691 3.90173 13.6703 2.33218 13.7087 2.31717C13.7165 2.31399 13.7242 2.31096 13.7318 2.30779C13.9547 2.21426 14.1544 2.1649 14.3094 2.1649C14.7864 2.1649 15.2205 2.90472 15.5978 4.35477L15.9146 5.61677C16.5981 8.30125 16.4941 9.98034 15.619 10.3464L14.4438 10.8414C14.397 10.8607 14.3423 10.8811 14.282 10.904C13.6328 11.1498 12.2819 11.661 11.671 13.1638C11.1166 14.5274 11.3461 16.2584 12.3718 18.4559C13.7533 21.4136 15.3113 22.8514 17.1349 22.8514C17.9812 22.8514 18.6606 22.5212 19.0664 22.324C19.1412 22.2877 19.208 22.2543 19.2799 22.2246L20.4478 21.7238C20.5683 21.6736 20.684 21.6492 20.8015 21.6492C21.3637 21.6492 22.3716 22.2058 23.9769 24.8519L24.6438 25.9656C25.4657 27.3227 25.5307 27.9389 25.4405 28.2169Z" fill="#141516"></path>
-              </svg></i>
-          <a href="tel:+12345678">+123 (4567) -890</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- Mobile Menu End -->
+            <!-- Floating Phone Button -->
+            <a href="tel:+380934930338"
+            class="call-btn"
+            aria-label="Позвонить Lock-master"
+            rel="nofollow"
+            title="Позвонить">
+            <!-- иконка телефона (SVG) -->
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1v3.55a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.55a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.26 2.22z" fill="currentColor"/>
+            </svg>
+            </a>
             </div>
   
         </div>
@@ -489,31 +431,57 @@
                 "url":"https://example.com"
                 }
             </script>
-            
-                <script type="text/javascript">
-                function getElementY(query) {
-                    return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top;
-                }
-                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                    anchor.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        const targetID = this.getAttribute("href");
-                        const target_Y = getElementY(targetID);
-                        let scroll = (targetY) => {
-                            window.scrollTo({ top: targetY, behavior: "smooth" });
-                            setTimeout(() => {
-                                const targetY_again = getElementY(targetID);
-                                if (targetY !== targetY_again) {
-                                    scroll(targetY_again);
-                                }
-                            }, 2000);
-                        };
-                        scroll(target_Y);
-                    });
-                });
-            </script>
+
       
 
+            <script>
+                const burger = document.getElementById('burger');
+                const panel  = document.getElementById('offcanvas');
+                const overlay= document.getElementById('overlay');
+                const menuitem = document.querySelectorAll('.menu-item');
+
+                let lastFocused = null;
+
+                function openMenu(){
+                lastFocused = document.activeElement;
+                burger.classList.add('is-open');
+                panel.classList.add('open');
+                overlay.classList.add('show');
+                overlay.hidden = false;
+                document.body.classList.add('body-lock');
+                burger.setAttribute('aria-expanded','true');
+                panel.setAttribute('aria-hidden','false');
+                // фокус внутрь меню
+                const firstLink = panel.querySelector('a,button,[tabindex]:not([tabindex="-1"])');
+                firstLink?.focus();
+                }
+
+                function closeMenu(){
+                burger.classList.remove('is-open');
+                panel.classList.remove('open');
+                overlay.classList.remove('show');
+                document.body.classList.remove('body-lock');
+                burger.setAttribute('aria-expanded','false');
+                panel.setAttribute('aria-hidden','true');
+                // скрыть overlay после анимации
+                setTimeout(()=>{ overlay.hidden = true; }, 300);
+                lastFocused?.focus?.();
+                }
+
+                function toggleMenu(){
+                const isOpen = panel.classList.contains('open');
+                isOpen ? closeMenu() : openMenu();
+                }
+
+                burger.addEventListener('click', toggleMenu);
+                overlay.addEventListener('click', closeMenu);
+                menuitem.forEach(element => {
+                    element.addEventListener('click', closeMenu);
+                });
+                document.addEventListener('keydown', (e)=>{
+                if(e.key === 'Escape') closeMenu();
+                });
+            </script>
     
 
 </body></html>

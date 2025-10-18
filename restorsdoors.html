@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/slick-theme.css">
         <link rel="stylesheet" href="css/sal.css">
-        <link rel="stylesheet" href="css/app.css?v=14">
+        <link rel="stylesheet" href="css/app.css?v=17">
  
     </head>
 
@@ -51,7 +51,7 @@
                         </div>
                         <div class="main-menu__right">
                             <div class=" d-xl-block d-none">
-                             <button class="btn-calc">Рассчитать стоимость</button>
+                             <button class="btn-calc" data-quiz-open>Рассчитать стоимость</button>
                             </div>
                         </div>
                         <!-- Burger -->
@@ -68,13 +68,13 @@
                             <li><a href="index.html#about" class="menu-item">О компании</a></li>
                             <li><a href="index.html#gallery" class="menu-item">Наши работы</a></li>
                             <li><a href="index.html#footer" class="menu-item">Контакты</a></li>
-                             <button class="btn-calc burgertel">Рассчитать стоимость</button>
+                             <button class="btn-calc burgertel" data-quiz-open>Рассчитать стоимость</button>
                         </ul>
                         </div>
                       </nav>
                     </div>
                   </header>
-                   <section class="doors-about">
+                   <section class="doors-about doorsbg-img">
                     <div class="dr-container">
                          <h2 class="dr-title">РЕСТАВРАЦИЯ ДВЕРЕЙ</h2>
                       <div class="doors-about__grid">
@@ -123,19 +123,16 @@
                           </div>
                         </aside>
                       </div>
-                    </div>
-                  </section>
-                  <section id="about-text" class="about-text">
-                    <div class="dr-container">
-                                 <p class="gallery-titletext">Lock-master предлагает вам услуги по реставрации входной двери и металлоконструкции. У нас вы можете модифицировать уже установленную бронированную дверь, а в частности, заменить облицовку с внешней или с внутренней стороны, заменить старую уплотнительную резину на новую или установить дополнительно второй уплотнительный контур. <br> <br>
+                           <p class="gallery-titletext">Lock-master предлагает вам услуги по реставрации входной двери и металлоконструкции. У нас вы можете модифицировать уже установленную бронированную дверь, а в частности, заменить облицовку с внешней или с внутренней стороны, заменить старую уплотнительную резину на новую или установить дополнительно второй уплотнительный контур. <br> <br>
                                  Заказать изготовление откосов из МДФ или влагостойкой фанеры с наличниками на внутреннюю часть входной двери. Монтаж таких современных и красивых откосов избавит вас от грязных и пыльных работ, связанных со шпатлевкой и покраской стен после установки новой двери. <br><br>
                                   А также специалисты Lock-master помогут вам наладить правильную работу существующих замков, отрегулировать работу дверей (холста, коробки, петель), которые претерпели временный износ или изменили свою геометрию в связи с усадкой дома. Все вышеперечисленные работы выполняются по месту, у вас дома, в кратчайшие сроки с максимальной ответственностью и с высоким качеством!</p>
                     </div>
+                    
                   </section>
                   <section class="doors-restore">
 
                       <div class="dr-container">
-                     
+                      <h1 class="doors-restore-title">Наши работы</h1>
                         <div class="dr-slider-wrap">
                           <div class="testimonial-slider-doors">
                           <!-- slide -->
@@ -171,7 +168,7 @@
                           </div>
                         </div>
                         </div>
-                          <button class="btn-calc doorbtn">Замовити майстра</button>
+                          <button class="btn-calc doorbtn" data-quiz-open>Замовити майстра</button>
                       </div>
                   </section>
                 
@@ -181,7 +178,7 @@
                         <div class="main">
                             <div class="text-center mb-4">
                                 <h2 class="footer-title text-uppercase color-white mb-16">Замена, ремонт, реставрация. <br> Приезжаем быстро, работаем чисто.</h2>
-                                <a href="./properties.html" class="btn-calc footerbtn">Срочный выезд мастера 24/7</a>
+                                <p class="btn-calc footerbtn" data-quiz-open>Срочный выезд мастера 24/7</p>
                             </div>
                             <div class="row justify-content-between">
                                 <div class="col-xl-3 col-lg-3 col-12 mb-5 order-lg-1 order-2">
@@ -226,7 +223,161 @@
             </svg>
             </a>
             </div>
-  
+    <!-- модальное окно -->
+        <div class="qm-overlay" id="quizOverlay" aria-hidden="true">
+        <div class="modal-popup" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+            <div class="modal__head">
+            <div class="modal__title" id="quizTitle">Завадского Мастерская</div>
+            <button class="close" id="closeBtn" aria-label="Закрыть">✕</button>
+            </div>
+            <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+            <form class="modal__body" id="quizForm" novalidate>
+            <!-- Шаг 1 -->
+            <section class="step active" data-step="1">
+                <h3 style="margin:0 0 10px">Какая услуга вас интересует?</h3>
+                <p class="muted" style="margin-top:0">Выберите один вариант</p>
+                <div class="grid two" role="group" aria-label="Услуга">
+                <label class="card-popup"><input type="radio" name="service" value="Реставрация дверей" required> Реставрация дверей</label>
+                <label class="card-popup"><input type="radio" name="service" value="Бронедвери" required> Бронедвери</label>
+                <label class="card-popup"><input type="radio" name="service" value="Замки" required> Замки</label>
+                <label class="card-popup"><input type="radio" name="service" value="Сейфы" required> Сейфы</label>
+                </div>
+            </section>
+
+            <!-- Шаг 2 -->
+            <section class="step" data-step="2">
+                <h3 style="margin:0 0 10px">Прикрепите 3 фотографии</h3>
+                <p class="muted text-helper" style="margin-top:0">Это поможет нам быстрее оценить объем работ и детальнее изучить ваш случай, 
+                    если у вас нет возможности сделать фотографии, пропустите этот шаг, нажав на кнопку ниже: Пропустить</p>
+                <p class="muted" style="margin-top:0">Форматы: JPG/PNG/HEIC, до 10 МБ каждое</p>
+
+                <!-- обёртка со скроллом -->
+                <div class="scroll">
+                <div class="grid">
+                <div class="file form-item">
+                        <label for="file1">Торец</label>
+                        <div class="uploader" data-uploader="1">
+                            <!-- Невидимый input перекрывает всю область (клик/drag&drop работают) -->
+                            <input id="file1" name="edge" type="file" accept="image/*" required class="input-file">
+
+                            <div class="uploader__inner">
+                            <div class="uploader__icon">⬆</div>
+                            <div class="uploader__text">
+                                <b>Перетащите изображение сюда</b>
+                                <span>или нажмите «Выбрать файл»</span>
+                            </div>
+                            <button type="button" class="uploader__btn" data-pick="1">Выбрать файл</button>
+                            <div class="uploader__file" id="fileName1" style="display:none">
+                                <span class="name">Файл не выбран</span>
+                                <button type="button" class="uploader__clear" data-clear="1">✕</button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- твой блок предпросмотра остаётся -->
+                        <div class="previews"><div class="thumb" id="p1">Предпросмотр</div></div>
+                        <span class="error">Это поле обязательное*</span>
+                        </div>
+                        <div class="file form-item">
+                        <label for="file2">Вид спереди</label>
+
+                        <div class="uploader" data-uploader="2">
+                            <!-- Невидимый input перекрывает всю область (клик/drag&drop работают) -->
+                            <input id="file2" name="front" type="file" accept="image/*" required class="input-file">
+
+                            <div class="uploader__inner">
+                            <div class="uploader__icon">⬆</div>
+                            <div class="uploader__text">
+                                <b>Перетащите изображение сюда</b>
+                                <span>или нажмите «Выбрать файл»</span>
+                            </div>
+                            <button type="button" class="uploader__btn" data-pick="2">Выбрать файл</button>
+
+                            <div class="uploader__file" id="fileName2" style="display:none">
+                                <span class="name">Файл не выбран</span>
+                                <button type="button" class="uploader__clear" data-clear="2">✕</button>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- твой блок предпросмотра остаётся -->
+                        <div class="previews"><div class="thumb" id="p2">Предпросмотр</div></div>
+                        <span class="error">Это поле обязательное*</span>
+                        </div>
+
+                        <div class="file form-item">
+                        <label for="file3">Вид сзади</label>
+
+                        <div class="uploader" data-uploader="3">
+                        <!-- Невидимый input перекрывает всю область (клик/drag&drop работают) -->
+                        <input id="file3" name="back" type="file" accept="image/*" required class="input-file">
+
+                        <div class="uploader__inner">
+                        <div class="uploader__icon">⬆</div>
+                        <div class="uploader__text">
+                            <b>Перетащите изображение сюда</b>
+                            <span>или нажмите «Выбрать файл»</span>
+                        </div>
+                        <button type="button" class="uploader__btn" data-pick="3">Выбрать файл</button>
+
+                        <div class="uploader__file" id="fileName3" style="display:none">
+                            <span class="name">Файл не выбран</span>
+                            <button type="button" class="uploader__clear" data-clear="3">✕</button>
+                        </div>
+                        </div>
+                    </div>
+
+                <!-- твой блок предпросмотра остаётся -->
+                <div class="previews"><div class="thumb" id="p3">Предпросмотр</div></div>
+                <span class="error">Это поле обязательное*</span>
+                </div>
+
+                </div>
+                </div>
+            </section>
+
+            <!-- Шаг 3 -->
+            <section class="step" data-step="3">
+                <h3 style="margin:0 0 10px">Контактные данные</h3>
+                <div id="sendform" class="grid">
+                <div class="form-item">
+                    <label for="fullname">Имя и фамилия</label>
+                    <input class="input" id="fullname" name="fullname" type="text" placeholder="Иван Иванов" maxlength="60" required>
+                    <span class="error">Это поле обязательное*</span>
+                </div>
+                <div class="form-item">
+                    <label for="email">Электронная почта</label>
+                    <input class="input" id="email" name="email" type="email" placeholder="name@example.com" maxlength="70" required>
+                    <span class="error">Это поле обязательное*</span>
+                </div>
+                <div class="form-item">
+                    <label for="phone">Телефон</label>
+                    <input class="input phone" id="phone" name="phone" type="tel" inputmode="tel" placeholder="" required>
+                    <span class="error">Это поле обязательное*</span>
+                </div>
+                </div>
+            </section>
+
+            <!-- Успех -->
+            <section class="success hidden" id="successBlock">
+                <h3>Спасибо! Заявка отправлена</h3>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+            </section>
+            </form>
+
+            <div class="modal__foot" id="footerBar">
+            <button class="btn" id="backBtn" disabled>
+                <svg class="icon-left" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.25 9H3.75" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9 3.75L3.75 9L9 14.25" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <div class="spacer"></div>
+            <button class="btn" id="nextBtnToo">Пропустить</button>
+            <button class="btn" id="nextBtn">Далее</button>
+            <button class="btn primary hidden" id="submitBtn" form="quizForm" type="submit">Отправить</button>
+            </div>
+        </div>
+        </div>
         </div>
             <!-- Jquery Js -->
             <script src="js/jquery-3.6.3.min.js"></script>
@@ -252,6 +403,359 @@
                 }
             </script>
       
+
+            <link rel="stylesheet" href="form/intlTelInput.min.css">
+            <script src="form/intlTelInput.min.js"></script>
+            <script src="form/intlTelInput-jquery.min.js"></script>
+            <script>
+                $("input[name=phone],input.phone").on("input", (e) => {
+                    e.target.value = e.target.value.replace(/\D/, '');
+                    if (e.target.value.length > 10) {
+                        e.target.value = e.target.value.slice(0, -1);
+                    }
+                });
+                $('input[class*=phone]').each(function () {
+                    // Find input's form
+                    let form = $(this).closest("form");
+
+                    $(this).intlTelInput({
+                        utilsScript: "form/utils.js",
+                        autoHideDialCode: false,
+                        separateDialCode: true,
+                        initialCountry: "UA",
+                        placeholderNumberType: "MOBILE",
+                        customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+
+                            return selectedCountryPlaceholder;
+                        },
+                        geoIpLookup: function (callback) {
+                            fetch("https://ipapi.co/json")
+                                .then(function (res) { return res.json(); })
+                                .then(function (data) {
+                                    if (data.country_code === "UA") {
+                                        throw Error('UA');
+                                    }
+                                    callback(data.country_code);
+                                })
+                                .catch(function () { callback("us"); });
+                        },
+                    });
+                });
+                // Initialize the mask
+                $("input[name=phone],input.phone").on("countrychange", function (e, countryData) {
+                    $(this).val('');
+
+                    console.log($(this).intlTelInput("getSelectedCountryData"))
+                    $(this).closest('form').find('#dial').remove()
+                    $(this).closest('form').append("<input type='hidden' id='dial' name='dialCode' value='" + $(this)
+                        .intlTelInput("getSelectedCountryData")['dialCode'] + "'/>")
+
+                });
+            </script>
+                    <script>
+                                /* quiz.js — popup quiz with skip photos + your validation */
+                (function(){
+                // ====== DOM ======
+                const overlay    = document.getElementById('quizOverlay');
+                const openBtns   = document.querySelectorAll('[data-quiz-open]');
+                const closeBtn   = document.getElementById('closeBtn');
+                const backBtn    = document.getElementById('backBtn');
+                const nextBtn    = document.getElementById('nextBtn');
+                const skipBtn    = document.getElementById('nextBtnToo'); // "Пропустить" (шаг 2)
+                const submitBtn  = document.getElementById('submitBtn');
+                const bar        = document.getElementById('bar');
+                const form       = document.getElementById('quizForm');
+                const successEl  = document.getElementById('successBlock');
+                const footerBar  = document.getElementById('footerBar');
+                const steps      = [...form.querySelectorAll('.step')];
+
+                // Контактные поля (как у тебя в коде)
+                const fullnameEl = form.querySelector("input[name='fullname']");
+                const emailEl    = form.querySelector("input[name='email']");
+                const phoneEl    = form.querySelector("input[name='phone']");
+
+                // Файлы
+                const edgeEl  = document.getElementById('file1'); // name="edge"
+                const frontEl = document.getElementById('file2'); // name="front"
+                const backEl  = document.getElementById('file3'); // name="back"
+
+                // ====== STATE ======
+                let step = 0;          // 0: услуги, 1: фото, 2: контакты
+                let skipPhotos = false;
+
+                // ====== Helpers: UI errors (как у тебя) ======
+                function addError(element){ element?.closest('.form-item')?.classList.add('invalid'); }
+                function removeError(element){ element?.closest('.form-item')?.classList.remove('invalid'); }
+
+                // ====== Helpers: sanitize/validate ======
+                const ALLOWED_SERVICES = new Set(['Реставрация дверей','Бронедвери','Замки','Сейфы']);
+                const EMAIL_REG = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+                function EmailValid(value){ return EMAIL_REG.test(String(value||'').trim()); }
+                function pickRadio(name, root=document){
+                    const el = root.querySelector(`input[name="${name}"]:checked`);
+                    return el ? el.value : '';
+                }
+
+                // ====== Focus trap ======
+                function trapFocus(){
+                    const focusables = overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                    if(!focusables.length) return;
+                    const first = focusables[0], last = focusables[focusables.length-1];
+                    const handler = e=>{
+                    if(e.key === 'Escape'){ close(); return; }
+                    if(e.key !== 'Tab') return;
+                    if(e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
+                    else if(!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
+                    };
+                    overlay.addEventListener('keydown', handler, { once:false });
+                    const remove = ()=> overlay.removeEventListener('keydown', handler);
+                    overlay.addEventListener('transitionend', remove, { once:true });
+                }
+
+                // ====== File previews ======
+                function bindPreview(inputId, previewId){
+                    const input = document.getElementById(inputId);
+                    const box   = document.getElementById(previewId);
+                    if(!input || !box) return;
+                    input.addEventListener('change',()=>{
+                    box.innerHTML = 'Предпросмотр';
+                    const file = input.files?.[0];
+                    if(!file){ updateUI(); return; }
+                    const img = new Image();
+                    img.onload = ()=> { box.replaceChildren(img); updateUI(); }; 
+                    img.alt = file.name;
+                    img.src = URL.createObjectURL(file);
+                    });
+                }
+                ['file1','file2','file3'].forEach((id,i)=> bindPreview(id,'p'+(i+1)));
+
+                // ====== Fancy uploader (кнопка, drag&drop, имя, очистка) ======
+                function enhanceUploader(n){
+                    const up     = document.querySelector(`.uploader[data-uploader="${n}"]`);
+                    if(!up) return;
+                    const inp    = document.getElementById(`file${n}`);
+                    const pick   = up.querySelector(`[data-pick="${n}"]`);
+                    const info   = document.getElementById(`fileName${n}`);
+                    const nameEl = info?.querySelector('.name');
+                    const clear  = up.querySelector(`[data-clear="${n}"]`);
+
+                    if(pick) pick.addEventListener('click', ()=> inp?.click());
+
+                    ['dragenter','dragover'].forEach(ev=>{
+                    up.addEventListener(ev, e=>{ e.preventDefault(); e.stopPropagation(); up.classList.add('dragover'); });
+                    });
+                    ['dragleave','drop'].forEach(ev=>{
+                    up.addEventListener(ev, e=>{ e.preventDefault(); e.stopPropagation(); up.classList.remove('dragover'); });
+                    });
+                    up.addEventListener('drop', e=>{
+                    if(!inp || !e.dataTransfer?.files?.length) return;
+                    const dt = new DataTransfer();
+                    [...e.dataTransfer.files].slice(0,1).forEach(f => dt.items.add(f));
+                    inp.files = dt.files;
+                    inp.dispatchEvent(new Event('change', { bubbles:true }));
+                    });
+
+                    inp?.addEventListener('change', ()=>{
+                    const f = inp.files?.[0];
+                    if(!info || !nameEl) return;
+                    if(f){ nameEl.textContent = f.name; info.style.display = 'flex'; }
+                    else { info.style.display = 'none'; }
+                    updateUI();    
+                    });
+
+                    clear?.addEventListener('click', ()=>{
+                    if(!inp) return;
+                    inp.value = '';
+                    if(info) info.style.display = 'none';
+                    const thumb = document.getElementById(`p${n}`);
+                    if(thumb){ thumb.textContent = 'Предпросмотр'; thumb.innerHTML = 'Предпросмотр'; }
+                    });
+                }
+                [1,2,3].forEach(enhanceUploader);
+
+                // ====== Modal open/close/reset ======
+                function resetQuiz(preselect){
+                    step = 0;
+                    skipPhotos = false;
+
+                    form.reset();
+
+                    ['p1','p2','p3'].forEach(id=>{
+                    const el = document.getElementById(id);
+                    if(el){ el.textContent='Предпросмотр'; el.innerHTML='Предпросмотр'; }
+                    });
+                    ['fileName1','fileName2','fileName3'].forEach(id=>{
+                    const chip = document.getElementById(id);
+                    if(chip){ chip.style.display = 'none'; }
+                    });
+                    ['file1','file2','file3'].forEach(id=>{
+                    const el = document.getElementById(id);
+                    if(el) el.setAttribute('required','required');
+                    });
+
+                    form.querySelectorAll('.form-item.invalid').forEach(el=> el.classList.remove('invalid'));
+
+                    successEl.classList.add('hidden');
+                    footerBar.classList.remove('hidden');
+
+                    if(preselect){
+                    const radio = form.querySelector(`input[name="service"][value="${preselect}"]`);
+                    if(radio){ radio.checked = true; }
+                    }
+                }
+
+                function open(preselect){
+                    resetQuiz(preselect);
+                    overlay.classList.add('open');
+                    overlay.setAttribute('aria-hidden','false');
+                    document.body.classList.add('modal-open');
+                    trapFocus();
+                    updateUI();
+                }
+                function close(){
+                    overlay.classList.remove('open');
+                    overlay.setAttribute('aria-hidden','true');
+                    document.body.classList.remove('modal-open');
+                }
+
+                // ====== Steps & progress ======
+                function setProgress(){ bar.style.width = (((step+1)/steps.length)*100)+'%'; }
+                function showStep(index){
+                    steps.forEach((s,i)=> s.classList.toggle('active', i===index));
+                    setProgress();
+                    backBtn.disabled = index === 0;
+                    nextBtn.classList.toggle('hidden', index === steps.length - 1);
+                    submitBtn.classList.toggle('hidden', index !== steps.length - 1);
+                    if (skipBtn) skipBtn.classList.toggle('hidden', index !== 1); // только на шаге 2
+                    document.querySelector('.modal__body')?.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                function validateCurrent(){
+                    const current = steps[step];
+                    const required = current.querySelectorAll('[required]');
+
+                    // если шаг 2 пропущен — считаем валидным
+                    if (step === 1 && skipPhotos) return true;
+
+                    for(const el of required){
+                    if(el.type === 'radio'){
+                        if(!current.querySelector(`input[name="${el.name}"]:checked`)) return false;
+                    }else if(el.type === 'file'){
+                        if(!el.files || el.files.length === 0) return false;
+                    }else{
+                        if(!el.value.trim()) return false;
+                    }
+                    }
+                    return true;
+                }
+                function updateUI(){ showStep(step); nextBtn.disabled = !validateCurrent(); }
+
+                // ====== Openers/closers ======
+                openBtns.forEach(btn=>{
+                    btn.addEventListener('click', ()=>{
+                    const pre = btn.getAttribute('data-service'); // предвыбор услуги
+                    open(pre);
+                    });
+                });
+                closeBtn.addEventListener('click', close);
+                overlay.addEventListener('click', e=>{ if(e.target === overlay) close(); });
+
+                // ====== Navigation ======
+                form.addEventListener('input', updateUI);
+                form.addEventListener('change', updateUI); 
+
+                backBtn.addEventListener('click', e=>{
+                    e.preventDefault();
+                    if(step>0){ step--; updateUI(); }
+                });
+                nextBtn.addEventListener('click', e=>{
+                    e.preventDefault();
+                    if(!validateCurrent()) return;
+                    if(step < steps.length - 1){ step++; updateUI(); }
+                });
+
+                // "Пропустить" на шаге 2
+                if (skipBtn) {
+                    skipBtn.addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    ['file1','file2','file3'].forEach((id, idx)=>{
+                        const el = document.getElementById(id);
+                        if (el) el.removeAttribute('required');
+                        const thumb = document.getElementById('p' + (idx+1));
+                        if (thumb){ thumb.textContent = 'Предпросмотр'; thumb.innerHTML = 'Предпросмотр'; }
+                        const chip = document.getElementById('fileName' + (idx+1));
+                        if (chip){ chip.style.display = 'none'; }
+                    });
+                    skipPhotos = true;
+                    if (step < steps.length - 1){ step++; updateUI(); }
+                    });
+                }
+
+                // ====== SUBMIT (твоя валидация сохранена) ======
+                form.addEventListener('submit', async (e)=>{
+                    e.preventDefault();
+                    console.log('true1');
+
+                    console.log(phoneEl);
+                    console.log(emailEl);
+                    console.log(fullnameEl);
+
+                    // твои условия для подсветки "ок"
+                    if (fullnameEl.value.length > 5) { removeError(fullnameEl); } else { addError(fullnameEl); }
+                    if (phoneEl.value.length > 4)    { removeError(phoneEl); }    else { addError(phoneEl); }
+                    if (EmailValid(emailEl.value))   { removeError(emailEl); }    else { addError(emailEl); }
+
+                    // финальная проверка как у тебя
+                    if ((fullnameEl.value.length > 3) && (phoneEl.value.length > 4) && (EmailValid(emailEl.value))) {
+                    await sendData(); // отправляем
+                    }
+                });
+
+                // ====== SEND DATA (multipart FormData, с файлами если не пропущены) ======
+                async function sendData(){
+                    // услуга
+                    const serviceRaw = pickRadio('service', form);
+                    const service    = ALLOWED_SERVICES.has(serviceRaw) ? serviceRaw : '';
+
+                    const initTelCode = document.querySelector('.iti__selected-flag');
+                    const telCode = initTelCode.querySelector('.iti__selected-dial-code');
+
+                    const telCodeFull = telCode.textContent + phoneEl.value
+
+                    const fd = new FormData();
+                    fd.append('service',  service);
+                    fd.append('fullname', fullnameEl.value.trim());
+                    fd.append('email',    emailEl.value.trim());
+                    fd.append('phone',    telCodeFull);
+
+                    if (!skipPhotos) {
+                    if (edgeEl?.files?.[0])  fd.append('edge',  edgeEl.files[0],  edgeEl.files[0].name);
+                    if (frontEl?.files?.[0]) fd.append('front', frontEl.files[0], frontEl.files[0].name);
+                    if (backEl?.files?.[0])  fd.append('back',  backEl.files[0],  backEl.files[0].name);
+                    }
+
+                    try{
+                    const res = await fetch('./api.php', { method:'POST', body: fd });
+                    const json = await res.json().catch(()=>null);
+
+                    if(!res.ok || !json?.ok){
+                        console.error('API error:', json || res.statusText);
+                        alert('Не удалось отправить. Попробуйте позже.');
+                        return;
+                    }
+
+                    // успех
+                    steps.forEach(s=> s.classList.remove('active'));
+                    successEl.classList.remove('hidden');
+                    footerBar.classList.add('hidden');
+                    }catch(err){
+                    console.error(err);
+                    alert('Сеть недоступна. Попробуйте ещё раз.');
+                    }
+                }
+                })();
+
+                    </script>
+
 <script>
   // добавим держатель подписей в каждый слайд (один раз)
   $('.testimonial-slider-doors .dr-card').each(function(){
@@ -309,7 +813,8 @@
                 if(e.key === 'Escape') closeMenu();
                 });
             </script>
-    <script type="text/javascript"> 
+    
+<script type="text/javascript"> 
 function getElementY(query) { return window.pageYOffset + document.querySelector(query).getBoundingClientRect().top; } 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => { anchor.addEventListener("click", 
 function (e) { e.preventDefault(); 
@@ -318,5 +823,4 @@ let scroll = (targetY) => { window.scrollTo({ top: targetY, behavior: "smooth" }
 setTimeout(() => { const targetY_again = getElementY(targetID); if (targetY !== targetY_again) { scroll(targetY_again); } }, 1500); }; 
 scroll(target_Y); }); }); 
 </script>
-
 </body></html>

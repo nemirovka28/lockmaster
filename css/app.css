@@ -4410,7 +4410,7 @@ max-width: 100px;
   --size: 56px;
   --brand: #c08a5f;              /* цвет кнопки — поменяй под свой бренд */
   position: fixed;
-  right: 18px;
+  left: 18px;
   bottom: calc(20px + env(safe-area-inset-bottom, 10px));
   width: 4rem;
   height: 4rem;

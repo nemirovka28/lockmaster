@@ -151,47 +151,79 @@
             ]
           });
           }
-
-      if ($(".category-slider").length) {
-        $(".category-slider").slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          arrows: false,
-          centerPadding: '0px',
-          centerMode: true,
-          autoplay: true,
-          dots: false,
-          cssEase: 'linear',
-          autoplaySpeed: 1500,
-          responsive: [
-            {
-              breakpoint: 1199,
-              settings: {
-                slidesToShow: 3,
-              },
-            },
-            {
-              breakpoint: 992,
-              settings: {
+          if ($(".category-slider").length) {
+            
+            // Проверяем ширину экрана
+            if ($(window).width() < 1100) {
+              // Инициализируем слайдер только на экранах меньше 1100px
+              $(".category-slider").slick({
+                infinite: true,
                 slidesToShow: 2,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-              },
-            },
-            {
-              breakpoint: 492,
-              settings: {
-                slidesToShow: 1,
-              },
-            },
-          ],
-        });
-      }
+                slidesToScroll: 1,
+                arrows: false,
+                centerMode: false,
+                centerPadding: '0',
+                autoplay: true,
+                dots: false,
+                cssEase: 'linear',
+                autoplaySpeed: 1500,
+                responsive: [
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      slidesToShow: 2,
+                    },
+                  },
+                  {
+                    breakpoint: 576,
+                    settings: {
+                      slidesToShow: 1,
+                    },
+                  },
+                ],
+              });
+            }
+            
+            // Обработка изменения размера окна
+            $(window).on('resize', function() {
+              if ($(window).width() >= 1100) {
+                // Уничтожаем слайдер на больших экранах
+                if ($(".category-slider").hasClass('slick-initialized')) {
+                  $(".category-slider").slick('unslick');
+                }
+              } else {
+                // Инициализируем слайдер на маленьких экранах
+                if (!$(".category-slider").hasClass('slick-initialized')) {
+                  $(".category-slider").slick({
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    centerMode: false,
+                    centerPadding: '0',
+                    autoplay: true,
+                    dots: false,
+                    cssEase: 'linear',
+                    autoplaySpeed: 1500,
+                    responsive: [
+                      {
+                        breakpoint: 768,
+                        settings: {
+                          slidesToShow: 2,
+                        },
+                      },
+                      {
+                        breakpoint: 576,
+                        settings: {
+                          slidesToShow: 1,
+                        },
+                      },
+                    ],
+                  });
+                }
+              }
+            });
+          }
  
       if ($(".testimonial-slider").length) {
         $(".testimonial-slider").slick({
